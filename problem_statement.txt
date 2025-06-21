@@ -1,0 +1,35 @@
+Problem Statement: Predict Event Attendance with Incomplete Labels
+
+Theme
+This project falls under the theme of social and community engagement. The focus is on modeling human behavior — specifically predicting whether someone is likely to attend an event based on partial information.
+
+Background
+In real-world scenarios like college fests, tech talks, or workshops, organizers often circulate Google Forms to gauge interest and availability. But not everyone answers every question, and many forms have incomplete data — especially for the key question: “Will you attend?”
+Despite that, we still need to plan food, seating, resources, and logistics based on expected turnout. That’s where machine learning can help.
+
+Objective
+The main goal is to build a machine learning model that can predict whether a person will attend an event based on their partial survey responses. This is a semi-supervised learning problem, where we only have some “Yes” or “No” labels for attendance, and we need to predict the missing ones using the rest of the data.
+
+What the survey includes
+The data is collected via Google Forms, and includes the following fields:
+Interest in the event topic (Yes / No)
+Distance to the event location (<1km, 1–5km, 5–10km, >10km)
+Number of similar events attended in the past year (0 or more)
+Free time availability during the event (Yes / No)
+Willingness to attend (this field is partially filled — our target to predict)
+
+What the ML model should do
+Train on the responses that have labels
+Use a self-training (semi-supervised) technique to generate pseudo-labels for missing values
+Retrain using both real and predicted labels
+Predict attendance for any new or existing user based on the input features
+
+Submission Requirements :
+
+Google Form link used for data collection
+Dataset in CSV format with some labeled and unlabeled entries
+Model file (model.pkl) and scaler if used
+Code in .ipynb or .py format
+Screenshot of a successful prediction
+A simple README file
+Team name and member details
